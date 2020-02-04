@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BuscaCEP"
+             x:Class="BuscaCEP.MainPage">
+
+    <!--Padding = Espaço do item em relação ao Layout-->
+    <!--Spacing = Espaço do item em relação ao próximo item-->
+    <StackLayout BackgroundColor="#FFBF00" Padding="30" Spacing="30">
+        
+        <Label Text="BUSCA CEP" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+        <Entry x:Name="cepEntry" 
+               Placeholder="Informe o CEP" PlaceholderColor="#FFBF00" BackgroundColor="#FFFFFF"
+               MaxLength="8" Keyboard="Numeric" ReturnType="Search" Completed="BuscarCEP"/>
+
+        <Button x:Name="buscarButton" Text="BUSCAR" TextColor="#FFFFFF" BackgroundColor="#00416B"
+                Clicked="BuscarCEP"/>
+
+        <Label x:Name="resultadoLabel" Text="" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        
+    </StackLayout>
+    
+</ContentPage>
